@@ -29,6 +29,7 @@ static char *readline(const char *prompt) {
     }
 
     line = malloc(len + 1);
+    if (!line) return NULL;
     strcpy(line, buf);
     return line;
 }
