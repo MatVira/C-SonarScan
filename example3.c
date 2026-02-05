@@ -1,18 +1,16 @@
 #include "tinyexpr.h"
 #include <stdio.h>
 
-
 /* An example of calling a C function. */
 double my_sum(double a, double b) {
     printf("Called C function with %f and %f.\n", a, b);
     return a + b;
 }
 
-
 int main(int argc, char *argv[])
 {
     te_variable vars[] = {
-        {"mysum", my_sum, TE_FUNCTION2}
+        {"mysum", &my_sum, TE_FUNCTION2}
     };
 
     const char *expression = "mysum(5, 6)";
@@ -27,9 +25,9 @@ int main(int argc, char *argv[])
         te_free(n);
     } else {
         /* Show the user where the error is at. */
-        printf("\t%*s^\nError near here", err-1, "");
+        printf("\t%*s^\nError near here", err - 1, "");
     }
-
 
     return 0;
 }
+D

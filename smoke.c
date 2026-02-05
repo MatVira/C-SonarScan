@@ -299,6 +299,8 @@ void test_variables() {
     lok(expr4);
     lok(!err);
 
+int x, y;
+
     for (y = 2; y < 3; ++y) {
         for (x = 0; x < 5; ++x) {
             double ev;
@@ -307,14 +309,14 @@ void test_variables() {
             lfequal(ev, cos(x) + sin(y));
 
             ev = te_eval(expr2);
-            lfequal(ev, x+x+x-y);
+            lfequal(ev, x + x + x - y);
 
             ev = te_eval(expr3);
-            lfequal(ev, x*y*y*y);
+            lfequal(ev, x * y * y * y);
 
             test = x;
             ev = te_eval(expr4);
-            lfequal(ev, x+5);
+            lfequal(ev, x + 5);
         }
     }
 
