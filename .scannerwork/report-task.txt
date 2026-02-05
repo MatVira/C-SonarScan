@@ -1,0 +1,6 @@
+projectKey=tinyexpr
+serverUrl=http://localhost:9000
+serverVersion=26.1.0.118079
+dashboardUrl=http://localhost:9000/dashboard?id=tinyexpr
+ceTaskId=7fac6d49-6730-4581-990e-3aaf1263dc90
+ceTaskUrl=http://localhost:9000/api/ce/task?id=7fac6d49-6730-4581-990e-3aaf1263dc90
